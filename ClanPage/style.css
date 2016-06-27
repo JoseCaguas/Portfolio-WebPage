@@ -1,0 +1,54 @@
+<style type="text/css">
+body { margin: 0px; 
+    text-decoration: none;
+    }
+body > div{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: black;
+    
+    }
+body > div > header,nav,aside,footer {
+    background:#222222; color:#2a9fd6;border-radius: 7px; 
+    margin:5px; padding: 10px 10px 0 10px ;
+    }
+body > div > header { order: 1; height:148px; flex: 0 1 100%; 
+    background-image:url('hdrbkgd.jpg'); background-repeat: no-repeat;
+    background-size: 105%; overflow: none; background-position: center;}
+body > div > nav     { order: 2; min-width:190px; flex: 0 1 100px; }
+body > div > main { order: 3; min-height:300px; min-width:300px; flex:1; 
+    padding:5; color:#2a9fd6; font-size: 1.25em; font-weight: bold; }
+body > div > aside   { order: 4; min-width: 50px; flex: 0 1 50px; }
+body > div > footer { order: 5; height:100px; flex: 0 1 100%; }
+
+a {text-decoration: none; color:#2a9fd6;}
+
+h1 { color:#2a9fd6;
+     font-family: verdana,sans-serif;
+     font-size: 3em;
+    }
+h2 { background-color:#AEAED4;
+     color:#191970;
+     font-family: verdana,sans-serif;
+    }
+ul{
+    list-style-type: none;
+}
+ul#menu {
+    font-size: .90em;
+    font-weight: bold;
+    padding: 0;
+    }
+ul#menu li {display: inline;}
+ul#menu li a {
+    background-color:#252a30;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px 8px 0 0;
+    }
+ul#menu li a:hover {
+    background-color: white;
+    color:#2a9fd6;
+    }
+</style>

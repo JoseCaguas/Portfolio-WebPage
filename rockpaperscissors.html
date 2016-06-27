@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="css/mycss.css">
+    <script src="javascript/myjs.js"></script>
+  <title>My Portfolio - Rock, Paper, Scissors</title>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <div>
+    <header> 
+      <h1>SD1340 HTML5, CSS3, and JavaScript</h1>
+      <h2>Prof. Amashta's Class</br>My Portfolio Project</h2>
+        <ul id="menu">
+            <li><a href="index.html">My Bio</a></li>
+            <li><a href="history.html">My IT History</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="rockpaperscissors.html">Rock, Paper, Scissors</a></li>
+            <li><a href="ClanPage/index.html">My Other Project</a></li>
+        </ul>
+    </header>
+    
+    <main>
+      
+      <div id="body">
+        <p><h2>Welcome to my Rock, Paper, Scissors game page!</h2></p>
+        <p>This page is the second JavaScript page and will show more of the cool things we can do with JavaScript.</p>
+        <p><h1 align="center">Lets play a game of Rock, Paper, Scissors.</h1></p>
+      </div>
+      
+
+      <div id="score">
+        <h2>The Score</h2>
+        <table style="width:100%" text-align=center>
+          <tr>
+            <th>Player Wins</th>
+            <th>Ties</th>    
+            <th>Computer Wins</th>
+          </tr>
+          <tr style="font-size:3em;">
+            <td id="playerScore">0</td>
+            <td id="tieScore">0</td>    
+            <td id="compScore">0</td>
+          </tr>
+        </table>
+      </div>
+      
+
+      <div id="game">
+        <h2>Choose your weapon</h2>
+        <table style="width:100%" text-align=center>
+          <tr>
+            <th>Rock</th>
+            <th>Paper</th>    
+            <th>Scissors</th>
+          </tr>
+          <tr>
+            <td> <button onclick="rockFunction()">
+              <img src="images/rock.jpe" alt="Rock" style="height: 100px;"/>
+              </button>
+            </td>
+            <td> <button onclick="paperFunction()">
+              <img src="images/paper.jpe" alt="Paper" style="height: 100px;"/>
+              </button>
+            </td>
+            <td> <button onclick="scissorsFunction()">
+              <img src="images/scissors.jpe" alt="Scissors" style="height: 100px;"/>
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="result">
+        <h2>The Result of this Round</h2>
+        <table style="width:100%" text-align=center>
+          <tr>
+            <th>You Chose</th>
+            <th>Computer chooses</th>
+          </tr>
+          <tr>
+            <td id="playerChoice">
+              Choose
+            </td>
+            <td id="compChoice">  
+              Waiting
+            </td>
+          </tr>
+        </table>
+        <button onclick="printFunction()">Print</button>
+      </div> 
+
+    </main>    
+
+    <footer>  
+        <div align="center">
+            <a href="https://www.itt-tech.edu/" style="height: 100px;">
+                <img src="https://images.itt-tech.edu/edu/misc/logo-ITT.svg" alt="ITT Logo" style="height: 50px; margin: 10px">
+            </a>
+            </a>
+            <a href="https://www.w3.org/" style="height: 100px;">
+                <img src="http://js.devexpress.com/Content/Images/features/html5-css-javascript-logos.png" alt="HTML, CSS, JavaScript Logo" style="height: 50px; margin: 10px">
+            </a>
+            </a>
+        </div>
+       Copyright &copy; 2016 Jose L. Torres
+    </footer>
+  </div>
+</body>
+</html>

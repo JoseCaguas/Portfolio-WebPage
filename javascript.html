@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+    <script src="javascript/myjs.js"></script>
+    <title>My Portfolio - JavaScript</title>
+    <meta charset="utf-8"/>
+    <style>
+        h3 {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <header>
+        <h1>SD1340 HTML5, CSS3, and JavaScript</h1>
+        <h2>Prof. Amashta's Class</br>My Portfolio Project</h2>
+        <ul id="menu">
+            <li><a href="index.html">My Bio</a></li>
+            <li><a href="history.html">My IT History</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="rockpaperscissors.html">Rock, Paper, Scissors</a></li>
+            <li><a href="ClanPage/index.html">My Other Project</a></li>
+        </ul>
+    </header>
+    <main>
+        <p>
+        <h2>Click the button to display date dialog:</h2>
+        <button onclick="dateFunction()">Date</button>
+        </p>
+
+        <p>
+        <h2>Click the button to display print dialog:</h2>
+        <button onclick="printFunction()">Print</button>
+        </p>
+
+        <p id="math">
+        <h2>Lets have fun with numbers!</h2>
+        <table>
+            <tr>
+                <td>1st Number:</td>
+                <td><input type="text" id="firstNum" value="10"></td>
+            </tr>
+            <tr>
+                <td>2nd Number:</td>
+                <td><input type="text" id="secondNum" value="20"></td>
+            </tr>
+            <tr>
+                <td>The Answer:</td>
+                <td><input type="text" id="answer" value="0"></td>
+            </tr>
+            <br/>
+        </table>
+        <button onclick="addFunction()">Add</button>
+        <button onclick="subtractFunction()">Subtract</button>
+        <button onclick="multiplyFunction()">Multiply</button>
+        <button onclick="divideFunction()">Divide</button>
+        </p>
+
+        <p id="word">
+        <h2>OK, now lets play with strings!</h2>
+        Lets reverse a string!<br/>
+        <table>
+            <tr>
+                <td>Enter String:</td>
+                <td><input type="text" id="string" value="The year is 2016"></td>
+            </tr>
+            <tr>
+                <td>The Answer:</td>
+                <td><input type="text" id="reverse">
+                </td>
+            </tr>
+        </table>
+        <button onclick="reverseFunction()">Reverse</button>
+        <br/><br/>
+
+        </p>
+    </main>
+    <aside>
+        <p>
+        <h2>I'll explain how each works here:</h2>
+        <div id="aside"></div>
+        </p>
+    </aside>
+    <footer>
+        <div align="center">
+            <a href="https://www.itt-tech.edu/" style="height: 100px;">
+                <img src="https://images.itt-tech.edu/edu/misc/logo-ITT.svg" alt="ITT Logo"
+                     style="height: 50px; margin: 10px">
+            </a>
+            </a>
+            <a href="https://www.w3.org/" style="height: 100px;">
+                <img src="http://js.devexpress.com/Content/Images/features/html5-css-javascript-logos.png"
+                     alt="HTML, CSS, JavaScript Logo" style="height: 50px; margin: 10px">
+            </a>
+            </a>
+        </div>
+        Copyright &copy; 2016 Jose L. Torres
+    </footer>
+</div>
+
+<!--Date button-->
+<script id="dater">
+    function dateFunction() {
+        /* Get the current date*/
+        now = new Date();
+        /*Split into date and time*/
+        year = now.getFullYear();
+        month = now.getMonth();
+        date = now.getDate();
+        hours = now.getHours();
+        mins = now.getMinutes();
+        /*Change into AM and PM*/
+        if (hours > 12) {
+            ampm = "pm";
+            hours = hours - 12;
+        } else {
+            ampm = "am";
+        }
+        alert("Welcome! \nTodays date is " + month + "/" + date + "/" + year + "\nand the time is " + hours + ":" + mins +
+                ampm);
+        explainFunction("dater",0);
+    }
+</script>
+<!--Print button-->
+<script id="printer">
+    function printFunction() {
+        print();
+        explainFunction("printer",1);
+    }
+</script>
+<!--Add button-->
+<script id="adder">
+    function addFunction() {
+        num1 = parseFloat(document.getElementById("firstNum").value);
+        num2 = parseFloat(document.getElementById("secondNum").value);
+        answer = num1 + num2;
+        document.getElementById("answer").value = answer;
+        explainFunction("adder",2)
+    }
+</script>
+<!--Subtract button-->
+<script id="subtracter">
+    function subtractFunction() {
+        num1 = parseFloat(document.getElementById("firstNum").value);
+        num2 = parseFloat(document.getElementById("secondNum").value);
+        answer = num1 - num2;
+        document.getElementById("answer").value = answer;
+        explainFunction("subtracter",3);
+    }
+</script>
+<!--Multiply button-->
+<script id="multiplier">
+    function multiplyFunction() {
+        num1 = parseFloat(document.getElementById("firstNum").value);
+        num2 = parseFloat(document.getElementById("secondNum").value);
+        answer = num1 * num2;
+        document.getElementById("answer").value = answer;
+        explainFunction("multiplier",4);
+    }
+</script>
+<!--Divide button-->
+<script id="divider">
+    function divideFunction() {
+        num1 = parseFloat(document.getElementById("firstNum").value);
+        num2 = parseFloat(document.getElementById("secondNum").value);
+        answer = num1 / num2;
+        document.getElementById("answer").value = answer;
+        explainFunction("divider",5);
+    }
+</script>
+<!--Reverse button-->
+<script id="reverser">
+    function reverseFunction() {
+        txt = document.getElementById("string").value;
+        res = txt.split("");
+        rev = new Array();
+        j = res.length - 1;
+        for (i = 0; i < res.length; i++) {
+            rev[j] = res[i];
+            j--;
+        }
+        document.getElementById("reverse").value = rev.join("");
+        explainFunction("reverser",6);
+
+    }
+</script>
+<!--This function will explain how the javascript works on the javascript page-->
+<script id="explainer">
+    function explainFunction(y,z) {
+        var x = document.scripts.namedItem(y).text;
+        var how = [
+            "The Date button first calls on the built in function called Date(). Then it breaks the given information " +
+            "into small bits of data and assigns it to different variables. I made an if-then statement to see if " +
+            "hours was greater than 12, if it was it would change am to pm and then subtract 12 from the military " +
+            "time. This is just to make it standard looking time. Then we just use the built in function alert() to " +
+            "display the information.",
+            "The Print button calls on the built in function called Print(). Print() then calls for the system to " +
+            "provide the printing functionality.",
+            "The Add button grabs the value stored in the box for the first number and converts it to decimal and " +
+            "then assigns it to a variable. Then it does the same thing for the second number. It then adds the two " +
+            "numbers and displays it in the answer box.",
+            "The Subtract button grabs the value stored in the box for the first number and converts it to decimal " +
+            "and then assigns it to a variable. Then it does the same thing for the second number. It then subtracts " +
+            "the two numbers and displays it in the answer box.",
+            "The Multiply button grabs the value stored in the box for the first number and converts it to decimal " +
+            "and then assigns it to a variable. Then it does the same thing for the second number. It then multiplies " +
+            "the two numbers and displays it in the answer box.",
+            "The Divide button grabs the value stored in the box for the first number and converts it to decimal " +
+            "and then assigns it to a variable. Then it does the same thing for the second number. It then divides " +
+            "the two numbers and displays it in the answer box.",
+            "The Reverse button grabs the value stored in the box for the entered string and saves it to the variable " +
+            "txt. The string is then split into individual characters with the built in function called split(). " +
+            "Once converted it is then sent to a loop that " +
+            "takes the individual characters that are saved and puts it in an array called rev in reverse order by " +
+            "reading res forward but assigning the values from the end to the beginning in the array. The " +
+            "array called rev is then converted to a string by the built in function called join() and displayed in " +
+            "the answer box.",
+            "I have a function called explainFunction() which pulls the script directly from the page to display in " +
+            "this box. I created an array called how and saved all of these explanations in it and when called it " +
+            "displays the individual explanations. Then I have a line of code that puts the script, the " +
+            "explanation of the script and the explanation of the explainFunction() together to display in the aside " +
+            "which is this box."
+        ]
+        document.getElementById("aside").innerHTML = "<h3>This is how the script looks:</h3>" + x +
+                "<h3>This is how it works:</h3>" + how[z] + "<h3>And lastly:</h3>" + how[7];
+    }
+</script>
+
+</body>
+</html>
