@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/recboxcss.css">
+    <title>My Portfolio - Bio</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <style>
+    </style>
+</head>
+
+<body>
+<div>
+    <header>
+        <h1>RecBox</h1>
+        <h2>Therapeutic Activities in a Box</h2>
+        <div id="letters">
+            <ul id="menu">
+                <li class="A2Z">A</li>
+                <li class="A2Z">B</li>
+                <li class="A2Z">C</li>
+                <li class="A2Z">D</li>
+                <li class="A2Z">E</li>
+                <!--<li>F</li>
+                <li>G</li>
+                <li>H</li>
+                <li>I</li>
+                <li>J</li>
+                <li>K</li>
+                <li>L</li>
+                <li>M</li>
+                <li>N</li>
+                <li>O</li>
+                <li>P</li>
+                <li>Q</li>
+                <li>R</li>
+                <li>S</li>
+                <li>T</li>
+                <li>U</li>
+                <li>V</li>
+                <li>W</li>
+                <li>X</li>
+                <li>Y</li>
+                <li>Z</li>-->
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="body">
+
+        </div>
+    </main>
+
+    <footer>
+        <div align="center">
+            <a href="https://www.itt-tech.edu/" style="height: 100px;">
+                <img src="https://images.itt-tech.edu/edu/misc/logo-ITT.svg" alt="ITT Logo"
+                     style="height: 50px; margin: 10px">
+            </a>
+            <a href="https://www.w3.org/" style="height: 100px;">
+                <img src="http://js.devexpress.com/Content/Images/features/html5-css-javascript-logos.png"
+                     alt="HTML, CSS, JavaScript Logo" style="height: 50px; margin: 10px">
+            </a>
+        </div>
+        Copyright &copy; 2016 Jose L. Torres
+    </footer>
+
+</div>
+<script>
+
+    $(".A2Z").on("mouseenter", function () {
+        $(this).animate({fontSize: '+=100%'}, 400);
+    });
+    $(".A2Z").on("mouseleave", function () {
+        $(this).animate({fontSize: '-=100%'}, 400);
+    });
+    $(".A2Z").on("click", function () {
+        $(".A2Z").animate({fontSize: '1em',}, 400);
+        $(".A2Z").css("background-color", "purple");
+        $(".A2Z").css("color", "white");
+        $(this).animate({fontSize: '+=200%', background: 'white', color: 'purple'}, 600);
+        $(this).css("background-color", "white");
+        $(this).css("color", "purple");
+    });
+
+</script>
+</body>
+</html>
