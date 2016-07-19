@@ -80,7 +80,7 @@ button {
     text-decoration: none;
     font-size: 1.5em;
     display: inline-block;
-    margin: 2px;
+    margin: 2px 2px 2px 2px;
     border-radius: 8px;
 }
 
@@ -121,6 +121,7 @@ ul#menu li {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 8px 8px 8px 8px;
+    margin: 20px 1px;
 }
 
 /*ul#menu li:hover {
@@ -128,7 +129,7 @@ ul#menu li {
     color:purple;
     }*/
 div#letters {
-    height: 100px;
+    min-height: 50px;
     text-align: center;
 
 }
