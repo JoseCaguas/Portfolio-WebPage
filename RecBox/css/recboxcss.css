@@ -30,6 +30,7 @@ body > div > main {
     color: #2a9fd6;
     font-size: 1.25em;
     font-weight: bold;
+    height: auto;
 }
 
 body > div > aside {
